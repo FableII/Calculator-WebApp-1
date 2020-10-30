@@ -8,18 +8,18 @@ var numbers = document.getElementsByClassName('number'),
     
     for(var i = 0; i < numbers.length; i++){
         var number = numbers[i];
-        number.addEventListener('click', (e) =>{console.log("Клик по цифре")}  );
+        number.addEventListener('click', numberPress);
     };
 
     
     for(var i = 0; i < operators.length; i++){
         var operator = operators[i];
-        operator.addEventListener('click', (e) =>{console.log("Клик по оператору")}  );
+        operator.addEventListener('click', operation);
     };
 
-    c.addEventListener('click', (e) =>{console.log("Клик по С")});
-    ce.addEventListener('click', (e) =>{console.log("Клик по СE")});
-    decimalBtn.addEventListener('click', (e) =>{console.log("Клик по .")});
+    c.addEventListener('click', clear);
+    ce.addEventListener('click', clear);
+    decimalBtn.addEventListener('click', decimal);
     
     
     
@@ -38,9 +38,5 @@ function decimal(argument){
 }
 
 function clear(argument){
-
-}
-
-function howWork(argument){
 
 }
