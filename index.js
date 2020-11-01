@@ -1,9 +1,8 @@
 var numbers = document.getElementsByClassName('number'),
     operators = document.getElementsByClassName('operator'),
-    decimalBtn = document.getElementById('decimal'),
-    ce = document.getElementById('ce'),
-    c = document.getElementById('c'),
-    result = document.getElementById('result');
+    decimalBtns = document.getElementById('decimal'),
+    clearBtns =document.getElementsByClassName('clear-btn'),
+    resultBtns = document.getElementById('result');
 
     
     for(var i = 0; i < numbers.length; i++){
@@ -17,26 +16,38 @@ var numbers = document.getElementsByClassName('number'),
         operator.addEventListener('click', operation);
     };
 
-    c.addEventListener('click', clear);
-    ce.addEventListener('click', clear);
-    decimalBtn.addEventListener('click', decimal);
+    for(var i = 0; i < clearBtns.length; i++){
+        var clearBtn = clearBtns[i];
+        clearBtn.addEventListener('click', function(e){
+            clear(e.target.id);
+        });
+    };
+
+
+    
+    decimalBtns.addEventListener('click', decimal);
+    resultBtns.addEventListener('click', result)
     
     
     
 
 
 function numberPress(){
-
+    console.log("Клик по цифре")
 }
 
 function operation(argument){
-
+    console.log("Клик по кнопке: операции")
 }
 
 function decimal(argument){
-
+    console.log("Клик по кнопке: .")
 }
 
-function clear(argument){
+function clear(id){
+console.log("Клик по кнопке: " + id + " !")
+}
 
+function result(){
+    console.log("Клик по кнопке:равно")
 }
