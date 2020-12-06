@@ -2,6 +2,6 @@
 
 A calculator with the basic functions.
 
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+[Demo](https://fableii.github.io/Calculator-WebApp-1/ "Calculator Simple")
 
-https://fableii.github.io/Calculator-WebApp-1/
+
